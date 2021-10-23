@@ -1,2 +1,1 @@
-# api_final
-api final
+# Учебный проект: API для блога Yatube 
