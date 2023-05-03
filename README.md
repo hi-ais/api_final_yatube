@@ -1,53 +1,52 @@
-# API для блога Yatube
-## Задача проекта:
-Создание API для упрощенной версии блога Yatube
-## Описание проекта:
-API реализован для всех моделей приложения posts
+# Yatube Blog API
+## Project description:
+Creating an API for a simplified version of the Yatube blog
+The API is implemented for all models of the posts application
 
-__Доступные эндпоинты__
+__ Available endpoints __
 
-| Эндпоинт | Метод | Описание|
+| Endpoints | Method | Description|
 |:---:|:----:|:----------:|
-| /api/v1/jwt/create/ | POST| получение JWT-токена|
-| /api/v1/jwt/refresh | POST|обновление JWT-токена|
-|/api/v1/jwt/verify/|POST|Проверка JWT-токена|
-|/api/v1/posts/|POST/GET| Добавление новой записи/Просмотр всех записей|
-|/api/v1/posts/{id}/|GET/PUT/PATCH/DELETE|получение/обновление/частичное обновление/удаление записи|
-|/api/v1/posts/{post_id}/comments/|GET/POST|Получение всех комметариев/Добавление нового комментария к посту|
-|/api/v1/posts/{post_id}/comments/{comment_id}/|GET/PUT/PATCH/DELETE|получение/обновление/частичное обновление/удаление комментария|
-|/api/v1/follow/|GET/POST|Получение списка всех своих подписок/ Новая подписка |
-| /api/v1/group/|GET|Получение списка всех групп|
-|/api/v1/group/{group_id}|GET|получение информации о группе|
+| /api/v1/jwt/create/ | POST| getting JWT token|
+| /api/v1/jwt/refresh | POST|refresh JWT token|
+|/api/v1/jwt/verify/|POST|JWT token validation|
+|/api/v1/posts/|POST/GET| Add new post/View all posts|
+|/api/v1/posts/{id}/|GET/PUT/PATCH/DELETE|GET/PUT/PATCH/DELETE a post|
+|/api/v1/posts/{post_id}/comments/|GET/POST|Getting all comments/Adding a new comment to a post|
+|/api/v1/posts/{post_id}/comments/{comment_id}/|GET/PUT/PATCH/DELETE|пGET/PUT/PATCH/DELETE a comment|
+|/api/v1/follow/|GET/POST|Getting a list of all subscriptions / New subscription |
+| /api/v1/group/|GET|Getting a list of all groups|
+|/api/v1/group/{group_id}|GET|getting information about a group|
 
-## Установка проекта:
-Клонировать репозиторий и перейти в него в командной строке:
+## Project setup
+Clone the repository and change into it on the command line:
 
 `git clone https://github.com/hi-ais/api_final_yatube.git`
 
 `cd api_final_yatube`
 
-Cоздать и активировать виртуальное окружение:
+Create and activate virtual environment:
 
 `python -m venv env`
 
 `source env/bin/activate`
 
-Установить зависимости из файла requirements.txt:
+Install dependencies from requirements.txt file:
 
 `python -m pip install --upgrade pip`
 
 `pip install -r requirements.txt`
 
-Выполнить миграции:
+Run migrations:
 
 `python manage.py migrate`
 
-Запустить проект:
+Run project:
 
 `python manage.py runserver`
 
-## Примеры запросов к API 
-1. Добавление новой публикации в коллекцию публикаций.
+## API request examples
+1. Adding a new post to the collection of posts.
 
 ```
 {
@@ -55,7 +54,7 @@ Cоздать и активировать виртуальное окружен�
   "group": 0
 }
 ```
-2. Получение комментария к публикации по id.
+2. Getting a comment to a post by id.
 
 ```
 {
@@ -66,4 +65,4 @@ Cоздать и активировать виртуальное окружен�
   "post": 0
 }
 ```
-Полная спецификация API будет доступна после запуска проекта по адресу http://localhost:8000/redoc/.
+The full API specification will be available once the project is launched at http://localhost:8000/redoc/.
