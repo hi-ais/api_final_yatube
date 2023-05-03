@@ -3,7 +3,7 @@
 Creating an API for a simplified version of the Yatube blog
 The API is implemented for all models of the posts application
 
-__ Available endpoints __
+__Available endpoints__
 
 | Endpoints | Method | Description|
 |:---:|:----:|:----------:|
